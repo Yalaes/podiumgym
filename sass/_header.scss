@@ -1,0 +1,112 @@
+header {
+
+
+    background: url("../images/hero.jpg") no-repeat top center;
+
+
+    background-size: cover;
+    background-color: $black;
+
+    min-height: 100vh;
+
+    @include portrait {
+        background: url("../images/hero-portrait.jpg") no-repeat top center;
+        background-size: contain;
+        background-color: $black;
+    }
+
+
+
+    .nav-bar {
+        padding-top: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            max-width: 20vw;
+            cursor: pointer;
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            @include tablet {
+                max-width: 40vw;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__menu {
+
+            // display: none;
+            ul {
+                display: flex;
+                gap: 1rem;
+
+                li {
+                    text-transform: capitalize;
+                    padding-right: 1rem;
+                }
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.nav-burger {
+    display: none;
+    max-width: 3rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    @include tablet {
+        display: block;
+    }
+
+    @include phone {
+        max-width: 2rem;
+    }
+}
+
+
+.headlines {
+
+    padding-top: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        font-family: 'Lato', sans-serif;
+        font-size: 4rem;
+        text-transform: uppercase;
+        line-height: 1;
+
+        text-shadow: 2px 2px 2px $black;
+
+    }
+}

@@ -1,0 +1,19 @@
+@mixin portrait {
+    @media only screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+//62.5em is 1000px 
+@mixin tablet {
+    @media only screen and (max-width:62.5em) {
+        @content;
+    }  
+}
+
+//41em is 656px
+@mixin phone {
+    @media only screen and (max-width:41em) {
+        @content;
+    }  
+}

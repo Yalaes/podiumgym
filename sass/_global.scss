@@ -1,0 +1,17 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.65;
+    color: $white;
+
+    font-family: 'Roboto', sans-serif;
+}
